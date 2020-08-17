@@ -34,7 +34,7 @@ RUN ssh-keygen -A
 CMD [ "/usr/sbin/sshd", "-D" ] 
 
 RUN mkdir /root/.kube
-COPY config /root/.kube
+COPY config /root/.kube/
 COPY *.crt /root/
 COPY client.key /root/
 COPY web.yml /root/
