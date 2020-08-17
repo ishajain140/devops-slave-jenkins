@@ -1,0 +1,10 @@
+#setting up webserver in image
+FROM centos:7
+RUN yum install net-tools -y
+RUN yum install /sbin/service -y
+RUN yum install httpd -y
+RUN yum install php -y
+RUN rm -f /var/www/html/index.php
+copy index.php /var/www/html/
+CMD /usr/sbin/httpd _DFOREGROUND && /bin/bash
+EXPOSE 80

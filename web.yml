@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: webserver-deploy
+   labels:
+     app: webserver
+spec:
+   replicas: 3
+   selector:
+      matchLabels:
+        app: webserver
+
+   template:
+      metadata: 
+        labels: 
+          app: webserver
+   spec:
+      containers:
+      - name: webserver-con
+        image: ishajain140/apache-webserver-php:v1
+        imagePullPolicy: Always        
