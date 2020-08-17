@@ -1,6 +1,6 @@
 <pre>
 <?php
-print("homepage");
+print("homepage after image is updated");
 print("\n");
 print `ifconfig`;
 ?>
