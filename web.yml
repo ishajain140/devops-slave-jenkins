@@ -17,5 +17,6 @@ spec:
       spec:
         containers:
         - name: webserver-con
+          imagePullPolicy: Always
           image: ishajain140/apache-webserver-php:v1
-          imagePullPolicy: Always        
+        
